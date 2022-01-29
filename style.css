@@ -12,6 +12,13 @@ body {
     font-family: monospace;
 }
 
+@font-face {
+    font-family: caslon;
+    src: url('fonts/ACaslonPro-Bold.otf');
+}
+
+
+
 .main {
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -21,10 +28,21 @@ body {
     font-size: 0.8rem;
 }
 
-.message, .formHeading, .form , .submit {
+.message, .formHeading, .formContainer , .submit {
     padding-left: 5%;
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 
 /* ---------- CONTAINER ----------*/
 
@@ -51,6 +69,9 @@ body {
 input {
     background-color: #00ffffad;
     color: #0e1724;
+    border: 1px solid #2f3045;
+    border-radius: 2px;
+    margin-right: 25%;
 }
 
 .formContainer {
@@ -60,10 +81,11 @@ input {
 }
 
 .formHeading {
+    padding-left: 0;
     padding-top: 2%;
 }
 
-    form {
+form {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -72,12 +94,29 @@ input {
 
 /*---------- SUBMIT -----------*/
 
+
 button {
     background-color: #2f3045;
     border: 1px solid #c9d1d9;
     border-radius: 4px;
-    margin-bottom: 8px;
+    margin-top: 16px;
+    margin-bottom: 24px;
 }
+
+button:hover {
+    background-color: #00ffff75;
+}
+
+button:active {
+    transform: scale(1.02);
+}
+
+.link {
+    color: #00ffffad ;
+    text-decoration: none;
+    
+}
+.link:hover{ text-decoration: underline;}
 
 /*---------- SIDEBAR -----------*/
 
@@ -88,18 +127,29 @@ button {
     height: 100vh;
     background-image: url(images/unity-part2-lamaery.webp) ;
     background-size: cover;
+    background-position: center;
 }
 
 /*---------  header ------------*/
 
 .header {
     display: flex;
-    background-color: rgba(48, 49, 70, 0.65);
+    background-color: rgba(219, 206, 120,0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+    font-family: caslon;
+    color: #1b2e49f8;
 }
 
 #stormlight {
     width: 20%;
-    height: auto;
+    margin-right: 8px;
+    color: #c9d1d9;
+    
 }
 
 /*--------- footer ------------*/
@@ -107,3 +157,4 @@ footer {
     text-align: center;
     padding: 5%;
 }
+
