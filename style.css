@@ -71,6 +71,13 @@ input {
     margin-right: 25%;
 }
 
+input:hover, input:focus {
+    outline: none;
+    border: 1px solid #00ffffad;
+    background-color: #2f3045 ;
+    color: #c9d1d9;
+}
+
 .formContainer {
     background-color: #0e1724;
     box-shadow: 0px 1px 8px #2f3045;
