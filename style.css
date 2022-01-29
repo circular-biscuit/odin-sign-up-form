@@ -18,11 +18,30 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding: 5%;
+    padding: 5% 0;
 }
 
+/*---------- form -------------*/
+
+.input {
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    padding-left: 0;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: #0e1724;
+    box-shadow: 0px 1px 8px #2f3045;
+}
+
+/*---------- submit -----------*/
+
 button {
-    background: none;
+    background-color: #2f3045;
     border: 1px solid #c9d1d9;
     border-radius: 4px;
 }
@@ -30,6 +49,28 @@ button {
 /*---------- SIDEBAR -----------*/
 
 .sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     height: 100vh;
     background-image: url(images/unity-part2-lamaery.webp) ;
+    background-size: contain;
+}
+
+/*---------  header ------------*/
+
+.header {
+    display: flex;
+    background-color: rgba(48, 49, 70, 0.65);
+}
+
+#stormlight {
+    width: 20%;
+    height: auto;
+}
+
+/*--------- footer ************/
+footer {
+    text-align: center;
+    padding: 5%;
 }
